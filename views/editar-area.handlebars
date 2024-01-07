@@ -1,0 +1,29 @@
+<main class="contenedor">
+ <form action="/areasInteres/editar/{{areaDeInteres.url}}" method="post" class="default-form">
+ 
+ <h3>Informacion General</h3>
+<div class="campo">
+    <label>Nombre</label>
+    <input type="text" name="nombre" placeholder="Nombre" value="{{areaDeInteres.nombre}}" required>
+</div>
+
+<div class="campo">
+    <label>Descripcion</label>
+    <textarea name="descripcion" placeholder="Descripcion" required>{{areaDeInteres.descripcion}}</textarea>
+</div>
+ <div class="campo">
+    <label>Nivel de Dificultad</label>
+    <select name="nivelDificultad">
+        <option value="" disabled {{tipoNivelDificultad areaDeInteres.nivelDificultad ''}}>---selecciona---</option>
+        <option value="basico" {{tipoNivelDificultad areaDeInteres.nivelDificultad 'basico'}}>Basico</option>
+        <option value="intermedio" {{tipoNivelDificultad areaDeInteres.nivelDificultad 'intermedio'}}>Intermedio</option>
+        <option value="avanzado" {{tipoNivelDificultad areaDeInteres.nivelDificultad 'avanzado'}}>Avanzado</option>
+    </select>
+</div>
+         <div class="campo centrar'horizontal">
+        <input type="submit" value="Guardar Cambios" class="btn btn-verde">
+        </div>
+
+ </form>
+
+</main>

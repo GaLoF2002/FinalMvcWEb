@@ -1,0 +1,50 @@
+<a href="/areasInteres/editar/{{areaDeInteres.url}}" class="btn btn-azul editar-btn">Editar área</a>
+<div class="contenido-superior vacante contenedor">
+    <div class="caja">
+        <p class="etiqueta">Nivel de Dificultad</p>
+        <p class="nombre">{{areaDeInteres.nivelDificultad}}</p>
+    </div>
+</div>
+
+<main>
+    <div class="contenedor">
+        <div class="caja">
+            <p class="etiqueta">Descripción</p>
+            <p class="nombre">{{areaDeInteres.descripcion}}</p>
+        </div>
+
+        <!-- Sección de Usuarios Destacados -->
+            <h2>Usuarios Destacados</h2>
+        {{#if usuariosDestacados.length}}
+            <ul>
+                {{#each usuariosDestacados}}
+                    <li>{{this.nombre}} - Respuestas correctas: {{this.conteoRespuestasCorrectas}}</li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No hay usuarios destacados aún.</p>
+        {{/if}}
+
+   <div class="contenedor datos-reclutador">
+    <div class="enviar-datos">
+        <h2>Completa el cuestionario para medir tu conocimiento</h2>
+        <form action="/areasInteres/responder/{{areaDeInteres.url}}" method="post" class="default-form">
+            <div class="nombre-usuario-form">
+                <label for="nombreUsuario">Tu nombre:</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+            </div>
+            {{#each areaDeInteres.preguntas}}
+                <div class="pregunta">
+                    <p>{{this.textoPregunta}}</p>
+                    {{#each this.opcionesRespuesta}}
+                        <input type="radio" name="respuesta_{{../_id}}" value="{{@key}}" id="{{../_id}}_{{@key}}">
+                        <label for="{{../_id}}_{{@key}}">{{this}}</label>
+                    {{/each}}
+                </div>
+            {{/each}}
+            <input type="submit" value="Enviar Respuestas">
+        </form>
+    </div>
+</div>
+
+</main>

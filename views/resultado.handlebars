@@ -1,0 +1,10 @@
+<h2>Resultado</h2>
+<h2>Tu porcentaje de aciertos es: {{porcentajeAciertos}}%</h2>
+
+{{#if (lt porcentajeAciertos 50)}}
+    <h3>Contenido Básico</h3>
+{{else if (lt porcentajeAciertos 100)}}
+    <h3>Contenido Normal</h3>
+{{else}}
+    <h3>Contenido Excelente</h3>
+{{/if}}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>{{{nombrePagina}}}</title>
+    
+</head>
+<body>
+    <div class="nombre-sitio contenedor">
+        <h1>
+            <a href="/">RealPWorld</a>
+        </h1>
+       
+
+        {{!-- {{#if barra}}
+            <div class="buscador">
+                <form action="#">
+                    <input type="text" placeholder="Buscar">
+                    <input type="submit" value="Buscar">
+
+                </form>
+
+            </div>
+        {{/if}} --}}
+        {{#if cerrarSesion}}
+        <div class="cerrar-sesion">
+            <p>Hola {{nombre}}</p>
+            <a href="/administracion">Administracion</a>
+            <a href="/cerrar-sesion">Cerrar Sesión</a>
+        </div>
+        
+        {{/if}}
+
+    </div>
+     <header class="site-header contenedor separador">
+        <h2>{{nombrePagina}}</h2>
+
+        {{#if tagline}}
+          <p class="tagline"> {{tagline}} </p>
+        {{/if}}
+
+        {{#if boton}}
+            <a href="/areasInteres/nueva" class="btn btn-azul"> Publicar Ruta Aprendizaje </a>
+        {{/if}}
+        
+        <div>
+        <p style="border: 10;"><a href="/administracion">Administracion</a></p>
+
+        </div>
+       
+
+
+
+     </header>
+
+
+    <div class="contenido-principal contenedor">
+    {{#if mensajes}}
+        <div class="alertas">
+            {{mostrarAlertas mensajes}}
+        </div>
+    {{/if}}
+
+    {{{body}}}
+    </div>
+
+
+</body>
+</html>

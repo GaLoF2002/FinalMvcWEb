@@ -1,0 +1,38 @@
+<main class="Lista-vacantes">
+    <h2>Navegacion</h2>
+    <div class="botones separador">
+        <a href="/editar-perfil" class="btn btn-azul">Editar Perfil</a>
+        <a href="/areasInteres/nueva" class="btn btn-azul">Nueva Vacante</a>
+        
+    </div>
+
+    <h2>Tus rutas de Aprendizaje</h2>
+    {{#if areasInteres.length}}
+        {{#each areasInteres}}
+         <div class="vacante panel-administracion">
+            <div class="caja">
+                <div class="contenido">
+                    <h3>{{nombre}}</h3>
+                    <p>{{descripcion}}</p>
+                    <p> Dificultad : {{nivelDificultad}}<p>
+
+                </div>
+            </div>
+         
+            <div class=" centrar-vertical caja">
+                <a href="/areasInteres/editar/{{url}}" class="btn btn-amarillo">Editar</a>
+            </div>
+            
+            <div class=" centrar-vertical caja">
+                <a href="#"  class="btn btn-azul">Eliminar</a>
+            </div>
+           
+        </div>
+        {{/each}}
+    {{else}}
+        <p>No hay rutas de aprendizaje</p>
+    {{/if}}
+
+
+
+</main>

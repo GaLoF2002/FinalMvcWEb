@@ -1,0 +1,162 @@
+<main class="contenedor">
+    <form action="/areasInteres/nueva" method="post" class="default-form">
+ 
+        <h3>Información General</h3>
+        <div class="campo">
+            <label>Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre del Área de Interés" required>
+        </div>   
+
+        <div class="campo">
+            <label>Descripción</label>
+            <textarea name="descripcion" placeholder="Descripción del Área de Interés" required></textarea>
+        </div>
+
+        <div class="campo">
+            <label>Nivel de Dificultad</label>
+            <select name="nivelDificultad" required>
+                <option value="" disabled selected>---selecciona---</option>
+                <option value="basico">Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+        </div>
+
+        {{!-- <!-- Contenidos -->
+       < <h3>Contenido Básico</h3>
+        <div class="campo">
+            <label>URL del Contenido Básico</label>
+            <input type="text" name="contenidos[basico][url]" placeholder="URL" required>
+        </div>
+        <div class="campo">
+            <label>Descripción del Contenido Básico</label>
+            <textarea name="contenidos[basico][descripcion]" placeholder="Descripción" required></textarea>
+        </div>
+
+        <!-- Contenido Normal -->
+        <h3>Contenido Normal</h3>
+        <div class="campo">
+            <label>URL del Contenido Normal</label>
+            <input type="text" name="contenidos[normal][url]" placeholder="URL" required>
+        </div>
+        <div class="campo">
+            <label>Descripción del Contenido Normal</label>
+            <textarea name="contenidos[normal][descripcion]" placeholder="Descripción" required></textarea>
+        </div>
+
+        <!-- Contenido Excelente -->
+        <h3>Contenido Excelente</h3>
+        <div class="campo">
+            <label>URL del Contenido Excelente</label>
+            <input type="text" name="contenidos[excelente][url]" placeholder="URL" required>
+        </div>
+        <div class="campo">
+            <label>Descripción del Contenido Excelente</label>
+            <textarea name="contenidos[excelente][descripcion]" placeholder="Descripción" required></textarea>
+        </div>
+ --}}
+
+        <!-- Preguntas -->
+        <div class="campo">
+        <label>Pregunta 1</label>
+        <input type="text" name="preguntas[0][textoPregunta]" placeholder="Texto de la pregunta" required>
+    </div>
+
+    <div class="campo">
+        <label>Opción A</label>
+        <input type="text" name="preguntas[0][opcionesRespuesta][A]" placeholder="Opción A" required>
+    </div>
+    <div class="campo">
+        <label>Opción B</label>
+        <input type="text" name="preguntas[0][opcionesRespuesta][B]" placeholder="Opción B" required>
+    </div>
+    <div class="campo">
+        <label>Opción C</label>
+        <input type="text" name="preguntas[0][opcionesRespuesta][C]" placeholder="Opción C" required>
+    </div>
+    <div class="campo">
+        <label>Opción D</label>
+        <input type="text" name="preguntas[0][opcionesRespuesta][D]" placeholder="Opción D" required>
+    </div>
+    <div class="campo">
+    <label>Respuesta Correcta</label>
+    <select name="preguntas[0][respuestaCorrecta]" required>
+        <option value="A">Opción A</option>
+        <option value="B">Opción B</option>
+        <option value="C">Opción C</option>
+        <option value="D">Opción D</option>
+    </select>
+    </div>
+
+
+
+    <div class="campo">
+        <label>Pregunta 2</label>
+        <input type="text" name="preguntas[1][textoPregunta]" placeholder="Texto de la pregunta" required>
+    </div>
+
+    <div class="campo">
+        <label>Opción A</label>
+        <input type="text" name="preguntas[1][opcionesRespuesta][A]" placeholder="Opción A" required>
+    </div>
+    <div class="campo">
+        <label>Opción B</label>
+        <input type="text" name="preguntas[1][opcionesRespuesta][B]" placeholder="Opción B" required>
+    </div>
+    <div class="campo">
+        <label>Opción C</label>
+        <input type="text" name="preguntas[1][opcionesRespuesta][C]" placeholder="Opción C" required>
+    </div>
+    <div class="campo">
+        <label>Opción D</label>
+        <input type="text" name="preguntas[1][opcionesRespuesta][D]" placeholder="Opción D" required>
+    </div>
+
+    <div class="campo">
+    <label>Respuesta Correcta</label>
+    <select name="preguntas[1][respuestaCorrecta]" required>
+        <option value="A">Opción A</option>
+        <option value="B">Opción B</option>
+        <option value="C">Opción C</option>
+        <option value="D">Opción D</option>
+    </select>
+    </div>
+
+    <div class="campo">
+        <label>Pregunta 3</label>
+        <input type="text" name="preguntas[2][textoPregunta]" placeholder="Texto de la pregunta" required>
+    </div>
+
+    <div class="campo">
+        <label>Opción A</label>
+        <input type="text" name="preguntas[2][opcionesRespuesta][A]" placeholder="Opción A" required>
+    </div>
+    <div class="campo">
+        <label>Opción B</label>
+        <input type="text" name="preguntas[2][opcionesRespuesta][B]" placeholder="Opción B" required>
+    </div>
+    <div class="campo">
+        <label>Opción C</label>
+        <input type="text" name="preguntas[2][opcionesRespuesta][C]" placeholder="Opción C" required>
+    </div>
+    <div class="campo">
+        <label>Opción D</label>
+        <input type="text" name="preguntas[2][opcionesRespuesta][D]" placeholder="Opción D" required>
+    </div>
+
+    <div class="campo">
+    <label>Respuesta Correcta</label>
+    <select name="preguntas[2][respuestaCorrecta]" required>
+        <option value="A">Opción A</option>
+        <option value="B">Opción B</option>
+        <option value="C">Opción C</option>
+        <option value="D">Opción D</option>
+    </select>
+    </div>
+        <!-- Aquí puedes incluir los campos para las preguntas como en tu ejemplo original -->
+
+        <div class="campo">
+            <input type="submit" value="Crear Área de Interés" class="btn btn-azul">
+        </div>
+    </form>
+</main>

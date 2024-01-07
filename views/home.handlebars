@@ -1,0 +1,28 @@
+<main class="lista-vacantes">
+    <h2>Lista de rutas</h2>
+
+    {{#if areasInteres.length}}
+            {{#each areasInteres}}
+
+            <div class="vacante">
+                <div class="caja">
+                    <h3>{{nombre}}</h3>
+                    <p class="puesta">Nivel: {{nivelDificultad}}</p>
+                </div>
+                <div class="caja">
+                    <p class="nombre contrato">{{descripcion}}</p>
+                </div>
+                <div class="caja centrar-vertical">
+                    <a href="/areasInteres/{{url}}" class="btn btn-verde">Aprender</a>
+                </div>
+                
+
+
+
+            </div>
+            {{/each}}
+     {{else}}
+    <p class="texto-centrado">No hay areas</p>
+    {{/if}}
+
+</main>
